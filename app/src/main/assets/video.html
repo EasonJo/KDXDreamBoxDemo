@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta name="viewport" content=""/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>FamilyAlbum</title>
+
+    <link rel="stylesheet" type="text/css" href="css/main.css" media="all"/>
+
+    <script type="text/javascript" src="lib/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="lib/jquery-ui-1.8.23.custom.min.js"></script>
+    <script type="text/javascript" src="lib/jquery.confirm.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+
+    <script type="text/javascript">
+    function startPlay()
+    {
+        //document.getElementById("demo").innerHTML="My First JavaScript Function";
+        var videos = document.getElementById('videoTag');
+        videos.loop = 'loop';
+        videos.play();
+    }
+    </script>
+</head>
+
+<body>
+
+<!--file:///mnt/sdcard/Inception.2010.07.16.1080P.预告片.mov-->
+<!--online video-->
+<!--http://2449.vod.myqcloud.com/2449_43b6f696980311e59ed467f22794e792.f20.mp4-->
+<video id="videoTag" src="file:///storage/emulated/legacy/Inception.2010.07.16.1080P.预告片.mov"
+       controls="controls" height="800px" width="1200"></video>
+
+<button type="button" onclick="startPlay()">点击这里</button>
+
+<p id="demo">使用 HTML5播放本地视频Demo</p>
+</body>
+</html>

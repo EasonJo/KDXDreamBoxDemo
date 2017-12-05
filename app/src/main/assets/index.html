@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .box{
+            width: 1080px;
+            height: 1920px;
+        }
+        #video{
+            width: 1080px;
+            height: 608px;
+            object-fit: inherit;
+        }
+
+    </style>
+</head>
+<body>
+<div class="box">
+    <video id="video" loop autoplay></video>
+</div>
+<script>
+    var videoArr = ["video/default5.mp4","video/default15.mp4"];
+    var videoTimeArr = [30,30];
+    var index = 0;
+    function play() {
+        var video = document.getElementById("video");
+        for(var i = 0;i<videoArr.length;i++){
+            video.setAttribute('src',videoArr[index]);
+            video.load();
+            video.play();
+        }
+        setTimeout(play,videoTimeArr[index]*1000);
+        index++;
+        if(index == 2){
+            index = 0;
+        }
+    }
+    <!--play();-->
+</script>
+</body>
+</html>
